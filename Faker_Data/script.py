@@ -46,7 +46,7 @@ def generate_data( n: int)-> list :
     
 data = generate_data(n =10000)
 #pprint(data)
-with open('data_generared.csv', 'w', encoding ='utf-8') as f_write:
+with open('generated_data.csv', 'w', encoding ='utf-8') as f_write:
     for dic in tqdm(data) :
         w = csv.DictWriter(f_write, fieldnames= dic.keys(), delimiter= ';') # ideal pour manipuler les fichier csv
         if f_write.tell() == 0:
@@ -55,6 +55,6 @@ with open('data_generared.csv', 'w', encoding ='utf-8') as f_write:
         w.writerow(dic)
     logging.info(f"Ecriture de {10000} lignes et {13} colonnes sur un fichier csv.")
 
-with open('data_generared.csv', 'r', encoding ='utf-8') as f_read:
+with open('generated_data.csv', 'r', encoding ='utf-8') as f_read:
     df = pd.read_csv(f_read, sep = ';')
     print(df.head(10))
