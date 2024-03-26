@@ -7,3 +7,5 @@ INFO:root:Generation de 10000 lignes.
 2024-03-26 22:31:50,222 : INFO :  Ecriture de 10000 lignes et 13 colonnes sue un fichier csv.
 2024-03-26 22:31:58,071 : INFO :  Generation de 10000 lignes.
 2024-03-26 22:31:58,644 : INFO :  Ecriture de 10000 lignes et 13 colonnes sur un fichier csv.
+2024-03-26 22:47:01,989 : INFO :  Generation de 10000 lignes.
+2024-03-26 22:47:02,675 : INFO :  Ecriture de 10000 lignes et 13 colonnes sur un fichier csv.

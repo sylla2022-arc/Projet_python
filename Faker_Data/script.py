@@ -47,8 +47,6 @@ def generate_data( n: int)-> list :
 data = generate_data(n =10000)
 #pprint(data)
 with open('data_generared.csv', 'w', encoding ='utf-8') as f_write:
-    filnames = ["Country_code", "Department", "Postcode",  "Administrative_unit", 
-                 'First_Name', 'Last_name', "Age",  "Email", 'Job', 'Income', 'Phone', 'City', 'Citation']
     for dic in tqdm(data) :
         w = csv.DictWriter(f_write, fieldnames= dic.keys(), delimiter= ';') # ideal pour manipuler les fichier csv
         if f_write.tell() == 0:
