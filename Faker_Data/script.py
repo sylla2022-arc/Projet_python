@@ -4,7 +4,8 @@ import pandas as pd
 import csv
 from tqdm import tqdm
 import logging
-
+m = 10000
+n = 13
 fake = Faker(locale='fr_FR')
 """ Génération de data aléatoirement"""
 
@@ -48,12 +49,13 @@ data = generate_data(n =10000)
 #pprint(data)
 with open('generated_data.csv', 'w', encoding ='utf-8') as f_write:
     for dic in tqdm(data) :
-        w = csv.DictWriter(f_write, fieldnames= dic.keys(), delimiter= ';') # ideal pour manipuler les fichier csv
+        w = csv.DictWriter(f_write, fieldnames= dic.keys(),
+                            delimiter= ';') 
         if f_write.tell() == 0:
             w.writeheader()  
 
         w.writerow(dic)
-    logging.info(f"Ecriture de {10000} lignes et {13} colonnes sur un fichier csv.")
+    logging.info(f"Ecriture de {m} lignes et {n} colonnes sur un fichier csv.")
 
 with open('generated_data.csv', 'r', encoding ='utf-8') as f_read:
     df = pd.read_csv(f_read, sep = ';')
