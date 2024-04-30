@@ -12,19 +12,7 @@ import time
 import numpy as np
 import base64
 
-requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
-
-logging.basicConfig(level=logging.DEBUG, 
-                    filemode='w',
-                    filename='file.log',
-                    format="%(asctime)s : %(levelname)s :  %(message)s"
-                    )
-logging.debug("La fonction a bien été exécutée")
-logging.info("Message général")
-logging.warning("Attention!")
-logging.error("Une erreur a été détectée")
-logging.critical("Erreur critique")
-
+#requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 count_request = 0
 def counter_request():
