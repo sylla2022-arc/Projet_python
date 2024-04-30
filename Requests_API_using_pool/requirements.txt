@@ -58,7 +58,7 @@ parso==0.8.4
 pillow==10.3.0
 platformdirs==4.2.0
 plotly==5.21.0
-prompt-toolkit==3.0.43
+#prompt-toolkit==3.0.43
 #protobuf==4.25.3
 #psutil==5.9.8
 #pure-eval==0.2.2
