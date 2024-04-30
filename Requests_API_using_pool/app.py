@@ -35,7 +35,7 @@ def choice_id_artist():
     if artist:
         API_artist = f"https://genius.com/api/search/multi?q={artist}"
         counter_request()
-        r = requests.get(API_artist)
+        r = requests.get(API_artist, verify=False)
         
         if r.status_code == 200:
             response = r.json().get('response', {})
@@ -67,7 +67,7 @@ def get_link_lyrics():
     while True:
         API = f"https://genius.com/api/artists/{id}/songs?page={page_number}&sort=popularity"
         counter_request()
-        r = requests.get(API)
+        r = requests.get(API? verify=False)
         if r.status_code == 200:
             st.write(f"Recherche en cours page_{page_number} ...")
             response = r.json().get('response', {})
