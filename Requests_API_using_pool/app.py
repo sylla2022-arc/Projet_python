@@ -11,6 +11,8 @@ from multiprocessing import Pool
 import time
 import numpy as np
 import base64
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 logging.basicConfig(level=logging.DEBUG, 
                     filemode='w',
