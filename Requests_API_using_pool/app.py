@@ -67,7 +67,7 @@ def get_link_lyrics():
     while True:
         API = f"https://genius.com/api/artists/{id}/songs?page={page_number}&sort=popularity"
         counter_request()
-        r = requests.get(API? verify=False)
+        r = requests.get(API, verify=False)
         if r.status_code == 200:
             st.write(f"Recherche en cours page_{page_number} ...")
             response = r.json().get('response', {})
