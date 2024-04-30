@@ -12,7 +12,7 @@ import time
 import numpy as np
 import base64
 
-#requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 logging.basicConfig(level=logging.DEBUG, 
                     filemode='w',
