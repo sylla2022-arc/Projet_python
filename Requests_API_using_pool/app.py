@@ -12,8 +12,6 @@ import time
 import numpy as np
 import base64
 
-#requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
-
 logging.basicConfig(level=logging.DEBUG, 
                     filemode='w',
                     filename='file.log',
@@ -172,7 +170,7 @@ def main():
                  votre productivité.""")
         
         st.write(""":red[Attention : Sans le nom complet de l'artiste, il se peut que
-                  le résultat ne soit pas pertinent ou l'artiste n'est pas disponible sur la plateforme]""")
+                  le résultat ne soit pas pertinent ou l'artiste n'est pas disponible sur la plateforme.]""")
         st.write(""":green[Le fetching time peut être long pour certains artistes!]""")
     
         current_word, song_title, nom_artist = all_links()
