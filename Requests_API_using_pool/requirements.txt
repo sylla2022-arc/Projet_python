@@ -82,7 +82,7 @@ seaborn==0.13.2
 six==1.16.0
 smmap==5.0.1
 soupsieve==2.5
-stack-data==0.6.3
+#stack-data==0.6.3
 stubs==1.0.0
 tenacity==8.2.3
 threadpoolctl==3.4.0
