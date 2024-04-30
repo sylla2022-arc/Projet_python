@@ -14,6 +14,18 @@ import base64
 
 #requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
+logging.basicConfig(level=logging.DEBUG, 
+                    filemode='w',
+                    filename='file.log',
+                    format="%(asctime)s : %(levelname)s :  %(message)s"
+                    )
+logging.debug("La fonction a bien été exécutée")
+logging.info("Message général")
+logging.warning("Attention!")
+logging.error("Une erreur a été détectée")
+logging.critical("Erreur critique")
+
+
 count_request = 0
 def counter_request():
     global count_request
@@ -25,7 +37,7 @@ def choice_id_artist():
     if artist:
         API_artist = f"https://genius.com/api/search/multi?q={artist}"
         counter_request()
-        r = requests.get(API_artist, verify=False)
+        r = requests.get(API_artist)
         
         if r.status_code == 200:
             response = r.json().get('response', {})
@@ -57,7 +69,7 @@ def get_link_lyrics():
     while True:
         API = f"https://genius.com/api/artists/{id}/songs?page={page_number}&sort=popularity"
         counter_request()
-        r = requests.get(API, verify=False)
+        r = requests.get(API)
         if r.status_code == 200:
             st.write(f"Recherche en cours page_{page_number} ...")
             response = r.json().get('response', {})
